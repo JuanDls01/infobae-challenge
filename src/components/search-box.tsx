@@ -76,7 +76,7 @@ export const SearchBox = () => {
               </SelectContent>
             </Select>
             <Button type="submit" className="hover:cursor-pointer">
-              <Icons.sparkles /> Run
+              <Icons.sparkles /> {isPending ? "Cargando..." : "Run"}
             </Button>
           </div>
         </form>
