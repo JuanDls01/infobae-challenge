@@ -11,6 +11,7 @@ interface SearchResultCardProps {
   text: string;
   author?: string;
   publishedDate?: string;
+  isRelevant?: boolean;
 }
 
 export const SearchResultCard = ({
@@ -20,6 +21,7 @@ export const SearchResultCard = ({
   text,
   author,
   publishedDate,
+  isRelevant,
 }: SearchResultCardProps) => {
   return (
     <Card className="w-60 h-60 justify-between">
@@ -57,11 +59,15 @@ export const SearchResultCard = ({
           </span>
         </div>
       </CardContent>
-      <CardFooter>
-        <Button>
-          Crear articulo <Icons.arrowRight />
-        </Button>
-      </CardFooter>
+      {isRelevant && (
+        <CardFooter>
+          <Link href={`/article?source=${url}`}>
+            <Button>
+              Crear articulo <Icons.arrowRight />
+            </Button>
+          </Link>
+        </CardFooter>
+      )}
     </Card>
   );
 };
