@@ -1,5 +1,10 @@
 export const Footer = () => (
-  <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-    <p>Footer</p>
+  <footer className="flex items-center justify-center">
+    <div className="py-2">
+      Created with ❤️ by
+      <a href={"https://juanidls.dev"} target="_blank" className="px-1.5">
+        JuaniDls
+      </a>
+    </div>
   </footer>
 );
